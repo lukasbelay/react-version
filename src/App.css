@@ -5,16 +5,19 @@ canvas {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -999;
 }
 #Header {
   position: absolute;
   margin: auto;
-  left: 80%;
-  transform: translate(-50%, -50%);
-  height: 0px;
-  width: 80%;
-  z-index: 999;
+  top: 20%;
+  right: 40%;
+  transform: translate(40%, -50%);
+  width: 100%;
+  size: 100px;
+  box-sizing: border-box;
+  z-index: 1;
   color: black;
   display: flex;
+  justify-content: center;
+  align-content: space-evenly;
 }

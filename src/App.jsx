@@ -100,10 +100,9 @@ export default function App() {
   return (
     <div>
       <div id="Header">
-        <h3>Home</h3>
-        <h3>Our Services</h3>
-        <h3>Subscribe</h3>
-        <h2>We do Websites Right</h2>
+        <h3>my work</h3>
+        <h2>Welcome to my website</h2>
+        <h3>contact me</h3>
       </div>
       <canvas id="bg"></canvas>
     </div>
