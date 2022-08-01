@@ -99,10 +99,12 @@ export default function App() {
 
   return (
     <div>
-      <div id="Header">
+      <div id="nav">
         <h3>my work</h3>
-        <h2>Welcome to my website</h2>
         <h3>contact me</h3>
+      </div>
+      <div id="Header">
+        <h2>Welcome to my website</h2>
       </div>
       <canvas id="bg"></canvas>
     </div>
