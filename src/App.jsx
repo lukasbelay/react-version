@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import * as THREE from "three";
+import { Clock } from "three";
 import "./App.css";
 
 export default function App() {
@@ -7,19 +8,19 @@ export default function App() {
     const textureLoader = new THREE.TextureLoader();
     const normalTexture = textureLoader.load("height2.jpg");
 
-    const Scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(
+    let Scene = new THREE.Scene();
+    let camera = new THREE.PerspectiveCamera(
       75,
       window.innerWidth / window.innerHeight,
       0.1,
       1000
     );
 
-    const renderer = new THREE.WebGLRenderer({
+    let renderer = new THREE.WebGLRenderer({
       canvas: document.getElementById("bg"),
       antialias: "true",
     });
-
+    let Clock = new THREE.Clock();
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
     camera.position.setZ(30);
@@ -87,6 +88,11 @@ export default function App() {
       //torus.rotation.x += 6.5;
       //torus.rotation.y += 6;
       //torus.rotation.z += 6;
+      let time = Clock.getElapsedTime();
+      moonNew.position.x = Math.cos(time) * 10;
+      moonNew.position.y = Math.sin(time) * 10;
+      moonNew.position.z = Math.tan(time) * 10;
+
       moon.rotation.y += 0.03;
       moonNew.rotation.y += 0.03;
       renderer.render(Scene, camera);
@@ -101,6 +107,8 @@ export default function App() {
     <div>
       <div id="nav">
         <h3>my work</h3>
+      </div>
+      <div id="bar">
         <h3>contact me</h3>
       </div>
       <div id="Header">

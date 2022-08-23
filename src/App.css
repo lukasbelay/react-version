@@ -1,6 +1,6 @@
-/*body {
+body {
   margin: 0;
-}*/
+}
 canvas {
   position: fixed;
   top: 0;
@@ -25,12 +25,29 @@ canvas {
 #nav {
   position: fixed;
   width: 120px;
+  height: 20%;
   left: 0;
-  top: 10%;
+  top: 0;
   color: black;
   z-index: 3;
-  background-color: blue;
+  background-color: burlywood;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+#bar {
+  position: fixed;
+  width: 120px;
+  height: 20%;
+  right: 0;
+  top: 0;
+  color: black;
+  z-index: 3;
+  background-color: rebeccapurple;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
