@@ -63,13 +63,6 @@ export default function App() {
     moon.position.z = -5;
     moonNew.position.x = -30;
     moonNew.position.z = -5;
-
-    function rotate() {
-      requestAnimationFrame(rotate);
-      renderer.render(Scene, camera);
-    }
-
-    rotate();
     //this updates the renderer when the browser changes
     function onWindowResize() {
       camera.aspect = window.innerWidth / window.innerHeight;
@@ -85,8 +78,8 @@ export default function App() {
       moonNew.position.y = Math.sin(time) * 10;
       moonNew.position.z = Math.tan(time) * 10;
 
-      moon.rotation.y += 0.03;
-      moonNew.rotation.y += 0.03;
+      moon.rotation.y += 69.13;
+      moonNew.rotation.y += 69.13;
       renderer.render(Scene, camera);
     }
 
@@ -98,10 +91,12 @@ export default function App() {
   return (
     <div>
       <div id="nav">
-        <h3>my work</h3>
+        <a href="https://github.com/lukasbelay">my work</a>
       </div>
       <div id="bar">
-        <h3>contact me</h3>
+        <a href="https://www.linkedin.com/in/lukas-tegegn-908360247/">
+          contact me
+        </a>
       </div>
       <div id="Header">
         <h2>Welcome to my website</h2>
