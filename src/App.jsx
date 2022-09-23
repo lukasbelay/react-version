@@ -8,7 +8,7 @@ export default function App() {
   useEffect(() => {
     //setting up texture loader for future use
     const textureLoader = new THREE.TextureLoader();
-    const normalTexture = textureLoader.load("height2.jpg");
+    const normalTexture = textureLoader.load("Height2.jpg");
     //setting up scene , camera and renderer
     let Scene = new THREE.Scene();
     let camera = new THREE.PerspectiveCamera(
@@ -36,10 +36,10 @@ export default function App() {
 
     Scene.add(pointLight);
     //using texture loader
-    const spaceTexture = new THREE.TextureLoader().load("space.jpg");
+    const spaceTexture = new THREE.TextureLoader().load("Space.jpg");
     Scene.background = spaceTexture;
 
-    const moonTexture = new THREE.TextureLoader().load("moon.jpg");
+    const moonTexture = new THREE.TextureLoader().load("Moon.jpg");
     //initializing thigs as objects
     let moon = new THREE.Mesh(
       new THREE.SphereGeometry(7, 64, 32),
